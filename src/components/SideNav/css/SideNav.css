@@ -1,0 +1,9 @@
+.NavContainer{
+    background: radial-gradient(circle at bottom, var(--basicOrange), var(--basicCyan));
+    border-radius: 20px;
+    width:100px; height:100%;
+    display:flex; flex-direction: column;
+    align-items: center; padding:20px 0px;
+    gap: 20px;
+    backdrop-filter: blur(10px);
+}

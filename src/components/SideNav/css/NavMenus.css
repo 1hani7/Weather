@@ -1,0 +1,32 @@
+a{text-decoration: none; color: inherit;}
+
+.MenuContainer{
+    width:100%;
+    display: flex; flex-direction: column;
+    align-items: center;
+}
+
+.MenuContainer ul{
+    width:100%; text-align: center;
+    list-style-type: none;
+    color: white;
+}
+
+.iconList{
+    width:100%; padding: 20px 0;
+    font-size:25px; cursor: pointer;
+}
+
+.iconList:hover{
+    background: rgba(0,0,0,0.3);
+    border-left: 3px solid white;
+    transition: all 0.15s;
+}
+
+.clicked{
+    background: rgba(0,0,0,0.3);
+    border-left: 3px solid white;
+    transition: all 0.15s;
+}
+
+.bi{pointer-events: none;}
