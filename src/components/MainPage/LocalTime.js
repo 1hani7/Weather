@@ -3,7 +3,7 @@ import './css/LocalTime.css';
 
 export default function LocalTime(){
     return(
-        <div className="Container">
+        <div className="LocalTimeContainer">
             <div></div>
         </div>
     )

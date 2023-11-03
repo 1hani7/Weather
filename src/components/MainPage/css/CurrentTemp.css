@@ -1,5 +1,5 @@
-.LocalTimeContainer{
+.CurrentTempContainer{
     border-radius: 20px;
-    width:30%; height: 310px;
+    width:70%; height: 310px;
     background: radial-gradient(circle at right, var(--basicOrange), var(--basicCyan));
 }
