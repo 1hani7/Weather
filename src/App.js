@@ -1,10 +1,12 @@
 /* eslint-disable */
 import React, { Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
+import {useSelector, useDispatch} from 'react-redux';
 import './App.css';
 
 import SideNav from './components/SideNav/SideNav';
 import SearchBar from './components/SearchSystem/SearchBar';
+import Clock from './components/Clock/Clock';
 
 const MainPage = React.lazy(() => import('./pages/MainPage'));
 const DayTem = React.lazy(() => import('./pages/DayTem'));
@@ -14,6 +16,7 @@ const Clouds = React.lazy(() => import('./pages/Clouds'));
 const Wind = React.lazy(() => import('./pages/Wind'));
 
 function App() {
+
   return (
     <div className="App">
       <SideNav />
@@ -30,6 +33,7 @@ function App() {
         </Suspense>
       </div>
       <SearchBar />
+      <Clock/>
     </div>
   );
 }
