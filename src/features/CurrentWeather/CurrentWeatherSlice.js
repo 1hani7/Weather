@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 // Slice reducer
 const CurrentWeatherSlice = createSlice({
     name: 'CurrentWeatherSlice',
-    initialValue: [],
+    initialState: [],
     reducers:{
         ChangeCurrentWeather:(state, action) => {
             return action.payload;
@@ -11,6 +11,6 @@ const CurrentWeatherSlice = createSlice({
     }
 });
 
-export const { CurrentWeatherData } = CurrentWeatherSlice.actions;
+export const { ChangeCurrentWeather } = CurrentWeatherSlice.actions;
 
 export default CurrentWeatherSlice;
