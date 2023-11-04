@@ -1,0 +1,33 @@
+.DayTemContainer{
+    display:flex; flex-direction: column;
+    row-gap:20px;
+}
+
+.DayTemTop{
+    height:350px; border-radius: 20px;
+    display:flex; justify-content: space-between;
+    align-items: center; column-gap: 20px;
+}
+
+.DayTemTopLeft{
+    border-radius: 20px;
+    height:100%; width:50%;
+    display:flex; justify-content: space-between;
+    column-gap:20px;
+}
+
+.DayTemMapBox{
+    border-radius: 20px;
+    height:100%; width:50%;
+}
+
+.DayTemForeBox{
+    height:380px; border-radius: 20px;
+}
+
+.DayTemTopLeft > div,
+.DayTemMapBox > div,
+.DayTemForeBox > div{
+    width:100%; height:100%; border-radius: 20px;
+    background: radial-gradient(circle at right, var(--basicOrange), var(--basicCyan));
+}

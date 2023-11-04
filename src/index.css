@@ -23,5 +23,5 @@ html{
 
 ::-webkit-scrollbar-thumb{
   border-radius: 20px;
-  background: radial-gradient(circle at right, var(--basicOrange), var(--basicCyan));
+  background: rgba(255, 255, 255, 0.708);
 }

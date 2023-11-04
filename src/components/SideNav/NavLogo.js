@@ -8,7 +8,8 @@ export default function NavLogo() {
     return (
         <div className="LogoWrap">
             <Link to="/">
-                <img src={`${Public}/images/weatherLogo.png`} alt="LOGO" />
+                <i class="bi bi-house-door"></i>
+                {/* <img src={`${Public}/images/weatherLogo.png`} alt="LOGO" /> */}
             </Link>
         </div>
     )

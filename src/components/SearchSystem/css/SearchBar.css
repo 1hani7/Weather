@@ -1,0 +1,30 @@
+.SearchContainer{
+    position:absolute; top:-45px; right:30px;
+    background: radial-gradient(circle at right, var(--basicOrange), var(--basicCyan));
+    border-radius: 20px;
+    display: flex; justify-content: space-evenly;
+    align-items: center; column-gap: 10px;
+    padding: 6px;
+}
+
+.SearchContainer select{
+    width: 80px; border-radius: 20px;
+    font-weight: 600; color: gray;
+    border: none; padding: 1px; padding-left:5px;
+}
+
+.SearchContainer select option{
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 0px 0px 20px 20px;
+}
+
+.SearchContainer button{
+    color: white; cursor: pointer;
+    background: none; border: none;
+    outline: none; font-size:17px;
+    padding-right: 5px;
+}
+
+.SearchContainer button:hover{
+    filter: brightness(0.8);
+}

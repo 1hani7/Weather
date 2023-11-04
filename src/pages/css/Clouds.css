@@ -1,0 +1,24 @@
+.CloudsContainer{
+    display:flex; flex-direction: column;
+    row-gap:20px;
+}
+
+.CloudsRow1{
+    display:flex; justify-content: space-between;
+    align-items: center;
+    width:100%; height:330px;
+    column-gap: 20px;
+}
+
+.CloudsRow1 > div:first-child{ width:40%;}
+
+.CloudsRow2{
+    width:100%; height:400px;
+}
+
+.CloudsRow1 > div,
+.CloudsRow2 > div{
+    width:100%; height:100%;
+    border-radius: 20px;
+    background: radial-gradient(circle at right, var(--basicOrange), var(--basicCyan));
+}
