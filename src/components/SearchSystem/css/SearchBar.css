@@ -8,7 +8,7 @@
 }
 
 .SearchContainer select{
-    width: 80px; border-radius: 20px;
+    width: 100px; border-radius: 20px;
     font-weight: 600; color: gray;
     border: none; padding: 1px; padding-left:5px;
 }

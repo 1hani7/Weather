@@ -1,25 +1,38 @@
 import { createSlice } from '@reduxjs/toolkit';
-import axios from 'axios';
 
-
-function getLocationFile(){
-    let Location = null;
-    const path = '../../data/KoreanLatLon.json';
-    axios.get(path)
-    .then(res => {
-        Location = res;
-    })
-    .catch(err => {
-        console.error(err);
-    })
-
-    return Location;
-}
-
-const LocationData = createSlice({
-    name: 'LocationData',
-    initialValue: getLocationFile,
-    reducers: {}
+const ShiInfo = createSlice({
+    name: 'ShiInfo',
+    initialState: '서울특별시',
+    reducers: {
+        ChangeShi: (state, action) => {
+            return action.payload;
+        }
+    }
 });
 
-export default LocationData;
+const DongInfo = createSlice({
+    name: 'DongInfo',
+    initialState: null,
+    reducers: {
+        ChangeDong: (state, action) => {
+            return action.payload;
+        }
+    }
+});
+
+const GooInfo = createSlice({
+    name: 'GooInfo',
+    initialState: null,
+    reducers: {
+        ChangeGoo: (state, action) => {
+            return action.payload;
+        }
+    }
+});
+
+
+export {ShiInfo, DongInfo, GooInfo};
+
+export const {ChangeShi} = ShiInfo.actions;
+export const {ChangeDong} = DongInfo.actions;
+export const {ChangeGoo} = GooInfo.actions;

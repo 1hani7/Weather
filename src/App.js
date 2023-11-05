@@ -1,13 +1,14 @@
 /* eslint-disable */
 import React, { Suspense, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import {useSelector, useDispatch} from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import './App.css';
 
 import SideNav from './components/SideNav/SideNav';
 import SearchBar from './components/SearchSystem/SearchBar';
 import Clock from './components/Clock/Clock';
-import CurrentData from './features/CurrentWeather/CurrentWeatherAPI';
+import getCurrentWeather from './features/CurrentWeather/CurrentWeatherAPI';
+import {ChangeCurrentWeather} from './features/CurrentWeather/CurrentWeatherSlice';
 
 const MainPage = React.lazy(() => import('./pages/MainPage'));
 const DayTem = React.lazy(() => import('./pages/DayTem'));
@@ -17,7 +18,12 @@ const Clouds = React.lazy(() => import('./pages/Clouds'));
 const Wind = React.lazy(() => import('./pages/Wind'));
 
 function App() {
-  CurrentData();
+  // const dispatch = useDispatch();
+  
+  // useEffect(()=>{
+  //   dispatch(getCurrentWeather());
+  // })
+  // getCurrentWeather();
 
   return (
     <div className="App">
@@ -35,7 +41,7 @@ function App() {
         </Suspense>
       </div>
       <SearchBar />
-      <Clock/>
+      <Clock />
     </div>
   );
 }
