@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const ShiInfo = createSlice({
     name: 'ShiInfo',
-    initialState: '서울특별시',
+    initialState: '대전광역시',
     reducers: {
         ChangeShi: (state, action) => {
             return action.payload;

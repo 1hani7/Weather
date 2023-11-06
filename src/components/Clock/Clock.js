@@ -1,12 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
 import './Clock.css';
 
 export default function Clock() {
-    const dispatch = useDispatch();
-    const test = useSelector(state => {
-        return state.Time;
-    })
     const [time, setTime] = useState(null);
 
     function getCurrentTime() {
@@ -14,7 +9,8 @@ export default function Clock() {
         let Year = date.getFullYear();
         let Month = date.getMonth() + 1;
         let Day = modifyClockNumber(date.getDate());
-        let Hour = modifyClockNumber(date.getHours());
+        let Hour = date.getHours();
+        let HourModified = Hour > 12 ? 'PM ' + (Hour - 12) : 'AM ' + Hour;
         let Min = modifyClockNumber(date.getMinutes());
         let Sec = modifyClockNumber(date.getSeconds());
         const week = ['일', '월', '화', '수', '목', '금', '토'];
@@ -22,7 +18,7 @@ export default function Clock() {
 
         const timeDate = [
             Year + '년 ', Month + '월 ', Day + '일 ',
-            weekDay + '요일 ', Hour + ':', Min + ':', Sec
+            weekDay + '요일 ', HourModified + ':', Min + ':', Sec
         ]
 
         setTime(timeDate);

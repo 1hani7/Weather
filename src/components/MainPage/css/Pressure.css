@@ -1,0 +1,14 @@
+.PressureContainer{
+    display: flex; flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.PressureContainer > div{
+    color: white;
+    font-weight:bolder; font-size:30px;
+}
+
+.PressureContainer > div > span{
+    font-weight:400; font-size:15px;
+}

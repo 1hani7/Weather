@@ -1,0 +1,20 @@
+.CloudyContainer{
+    padding: 25px;
+    position: relative;
+}
+
+.cloudsInfo{
+    position:absolute;
+    left:50%; top: 50%;
+    transform:translate(-50%, -55%);
+    text-align: center;
+    color: white;
+}
+
+.cloudsInfo > div{
+    font-size:20px;
+}
+
+.cloudsInfo > i{
+    font-size:30px;
+}

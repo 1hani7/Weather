@@ -21,8 +21,8 @@ export default function MainPage(){
                 <div className="row2Left">
                     <Pressure/>
                     <Humidity/>
-                    <Windy/>
                     <Cloudy/>
+                    <Windy/>
                 </div>
                 <div className="row2Right">
                     <RainSnow/>
