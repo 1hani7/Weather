@@ -31,7 +31,7 @@ export default function Clock() {
     useEffect(() => {
         const TicToc = setInterval(() => {
             getCurrentTime();
-        }, 1000);
+        }, 100);
 
         return () => clearInterval(TicToc);
     }, []);

@@ -20,5 +20,6 @@
 .RainSnowRow2 > div{
     width:100%; height:100%;
     border-radius: 20px;
-    background: radial-gradient(circle at right, var(--basicOrange), var(--basicCyan));
+    background: rgba(225, 225, 225, 0.2);
+    backdrop-filter: blur(10px);
 }

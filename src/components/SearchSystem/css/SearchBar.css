@@ -1,6 +1,7 @@
 .SearchContainer{
     position:absolute; top:-45px; right:30px;
-    background: radial-gradient(circle at right, var(--basicOrange), var(--basicCyan));
+    background: rgba(225, 225, 225, 0.2);
+    backdrop-filter: blur(10px);
     border-radius: 20px;
     display: flex; justify-content: space-evenly;
     align-items: center; column-gap: 10px;

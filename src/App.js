@@ -23,7 +23,7 @@ function App() {
   })
   
   useEffect(()=>{
-    // dispatch(getCurrentWeather());
+    dispatch(getCurrentWeather());
     console.log(test);
   },[])
 
