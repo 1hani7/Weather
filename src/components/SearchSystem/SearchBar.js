@@ -27,13 +27,16 @@ const ShiOptions = () => {
     const dispatch = useDispatch();
     const change = (e) => {
         const val = e.target.value;
+        changeInit(val);
         dispatch(ChangeShi(val));
         dispatch(ChangeGoo(null));
         dispatch(ChangeDong(null));
     }
 
+    const [initValue, changeInit] = useState('대전광역시') 
+
     return (
-        <select id="shi" name="shi" onChange={change}>
+        <select id="shi" name="shi" onChange={change} value={initValue}>
             {
                 arr.map((v, i) => (
                     <option key={i} value={v}>

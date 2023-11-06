@@ -1,22 +1,23 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-
-let date = new Date();
-let Year = date.getFullYear();
-let Month = date.getMonth() + 1;
-let Day = date.getDate();
-let Hour = date.getHours();
-let Min = date.getMinutes();
-let Sec = date.getSeconds();
-
 const TimeSlice = createSlice({
     name: 'Time',
     initialState: {
-        value: null
-    },
+        year: 0,
+        month: 0,
+        day: 0,
+        weekDay: '',
+        hour: 0,
+        minute: 0,
+        second: 0,
+      },
     reducers: {
-
+        updateTime : (state, action) => {
+            return action.payload;
+        }
     }
 })
 
 export default TimeSlice;
+
+export const {updateTime} = TimeSlice.actions;

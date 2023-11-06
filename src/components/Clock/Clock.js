@@ -1,11 +1,15 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import './Clock.css';
 
 export default function Clock() {
+    const dispatch = useDispatch();
+    const test = useSelector(state => {
+        return state.Time;
+    })
+    const [time, setTime] = useState(null);
 
-    const [time, setTime] = useState(getCurrentTime);
-
-    function getCurrentTime(){
+    function getCurrentTime() {
         let date = new Date();
         let Year = date.getFullYear();
         let Month = date.getMonth() + 1;
@@ -13,22 +17,26 @@ export default function Clock() {
         let Hour = modifyClockNumber(date.getHours());
         let Min = modifyClockNumber(date.getMinutes());
         let Sec = modifyClockNumber(date.getSeconds());
-        const week = ['일','월','화','수','목','금','토'];
+        const week = ['일', '월', '화', '수', '목', '금', '토'];
         let weekDay = week[date.getDay()];
 
-        return [`${Year}년 `, `${Month}월 `, `${Day}일 `, `${weekDay}요일 `,
-                `${Hour} : ${Min} : ${Sec}`];
+        const timeDate = [
+            Year + '년 ', Month + '월 ', Day + '일 ',
+            weekDay + '요일 ', Hour + ':', Min + ':', Sec
+        ]
+
+        setTime(timeDate);
     }
 
-    useEffect(()=>{
-        const TicToc = setInterval(()=>{
-            setTime(getCurrentTime());
-        });
+    useEffect(() => {
+        const TicToc = setInterval(() => {
+            getCurrentTime();
+        }, 1000);
 
         return () => clearInterval(TicToc);
-    },[]);
+    }, []);
 
-    return(
+    return (
         <div className='ClockContainer'>
             {time}
         </div>

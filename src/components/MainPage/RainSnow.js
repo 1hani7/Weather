@@ -3,6 +3,6 @@ import './css/RainSnow.css';
 
 export default function RainSnow(){
     return(
-        <div></div>
+        <div className='RainSnowContainer'></div>
     )
 }

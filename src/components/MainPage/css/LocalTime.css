@@ -3,3 +3,9 @@
     width:30%; height: 310px;
     background: radial-gradient(circle at right, var(--basicOrange), var(--basicCyan));
 }
+
+
+.NowTimeContainer{
+    text-align: center; color:white;
+    font-weight: bolder; font-size:25px;
+}
