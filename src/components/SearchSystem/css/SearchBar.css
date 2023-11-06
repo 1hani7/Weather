@@ -1,6 +1,6 @@
 .SearchContainer{
     position:absolute; top:-45px; right:30px;
-    background: rgba(225, 225, 225, 0.2);
+    background: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(10px);
     border-radius: 20px;
     display: flex; justify-content: space-evenly;

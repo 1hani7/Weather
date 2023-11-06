@@ -1,5 +1,11 @@
 .CurrentTempContainer{
     border-radius: 20px;
     width:70%; height: 310px;
-    background: radial-gradient(circle at right, var(--basicOrange), var(--basicCyan));
+    padding: 25px;
+    display:flex; justify-content: center;
+    align-items: center;
+}
+
+.CurrentTempContainer > canvas{
+    width: 100%; height: 100%;
 }

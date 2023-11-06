@@ -1,7 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import getCurrentWeather from './CurrentWeatherAPI';
 
-// Slice reducer
 const CurrentWeatherSlice = createSlice({
     name: 'CurrentWeatherSlice',
     initialState: {

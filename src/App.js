@@ -8,6 +8,7 @@ import SideNav from './components/SideNav/SideNav';
 import SearchBar from './components/SearchSystem/SearchBar';
 import Clock from './components/Clock/Clock';
 import getCurrentWeather from './features/CurrentWeather/CurrentWeatherAPI';
+import getForeCastWeather from './features/ForeCastWeather/ForeCastAPI';
 
 const MainPage = React.lazy(() => import('./pages/MainPage'));
 const DayTem = React.lazy(() => import('./pages/DayTem'));
@@ -19,12 +20,17 @@ const Wind = React.lazy(() => import('./pages/Wind'));
 function App() {
   const dispatch = useDispatch();
   const test = useSelector(state=>{
-    return state.CurrentWeather.value;
+    return state.ForeCastWeather;
+  })
+  const test2 = useSelector(state=>{
+    return state.CurrentWeather;
   })
   
   useEffect(()=>{
     dispatch(getCurrentWeather());
+    dispatch(getForeCastWeather());
     console.log(test);
+    console.log(test2);
   },[])
 
   return (

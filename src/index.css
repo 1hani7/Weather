@@ -3,14 +3,13 @@
 }
 
 :root{
-  --basicCyan:rgba(205, 231, 239, 0.105);
-  --basicOrange:rgba(155, 87, 66, 0.079);
   font-size:14px;
 }
 
 html{
-  /* background:rgb(11, 11, 11); */
-  background-image:url(../public/images/backgrounds/dayTime.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   width:100%; height: 100vh;
   display: flex; align-items: center;
   justify-content: center;

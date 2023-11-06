@@ -15,6 +15,7 @@
 
 .NowWeatherContainer img{
     width:30%;
+    position:relative; top:30px;
 }
 
 .NowWeatherDegree{

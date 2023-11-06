@@ -39,7 +39,7 @@ export default function Windy(){
                     <img src={`${Public}/images/windMeter.png`} />
                 </div>
                 <div className='WindMeterArrow'>
-                    <img style={{transform : degree}}
+                    <img style={{transform : degree, transition: '0.5s ease'}}
                     src={`${Public}/images/windMeterArrow.png`} />
                 </div>
             </div>
