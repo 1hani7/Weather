@@ -20,7 +20,7 @@ export default function Windy(){
     useEffect(()=>{
         setDegree(`rotate(${deg}deg)`);
         if( speed < 10 ){
-            setHardness('일반 강도')
+            setHardness('보통 바람')
         }else if( 10 <= speed && speed < 15 ){
             setHardness('약간 강풍')
         }else if( 15 <= speed && speed < 20 ){
@@ -44,8 +44,8 @@ export default function Windy(){
                 </div>
             </div>
             <div className='windMeterInfo'>
-                풍속 {speed}m/s<br/>
-                돌풍{gust}m/s
+                {hardness} {speed}m/s <br/>
+                돌풍 {gust}m/s
             </div>
         </div>
     )

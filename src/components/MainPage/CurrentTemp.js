@@ -93,7 +93,7 @@ export default function CurrentTemp() {
 
     useEffect(() => {
         setLabelData(dataList, setDateLabel);
-        setDayTempData(dataList, setTempData)
+        setDayTempData(dataList, setTempData);
     }, [changeTarget])
 
     return (

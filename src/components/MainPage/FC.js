@@ -3,6 +3,8 @@ import './css/FC.css';
 
 export default function FC(){
     return(
-        <div></div>
+        <div className='FCContainer'>
+
+        </div>
     )
 }

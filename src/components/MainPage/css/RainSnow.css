@@ -1,0 +1,32 @@
+.RainSnowContainer > table{
+    width:100%; height:100%;
+    border-collapse: collapse;
+    border-radius: 20px;
+    overflow:hidden;
+    backdrop-filter: blur(10px);
+
+    box-shadow: 3px 5px 10px 2px rgba(46, 46, 46, 0.5);
+}
+
+.RainSnowContainer > table > tbody > tr{
+    background: rgba(0,0,0,0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    display:flex; align-items: center;
+    justify-content: space-between;
+    padding: 2.9px 20px;
+}
+.RainSnowContainer > table > tbody > tr:last-child{
+    border: none;
+}
+
+.RainSnowContainer > table > tbody > tr > td{
+    display:flex; align-items: center;
+    column-gap: 20px;
+    color: white;
+    padding: 0px 15px;
+    text-align: center;
+}
+
+.RainSnowContainer img{
+    width:40px;
+}

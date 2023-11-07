@@ -25,7 +25,7 @@ export default function NavMenus() {
             <ul>
                 <Link to="/DayTem">
                     <li className="iconList" onClick={clicked}>
-                        <i className="bi bi-grid"></i>
+                        <i className="bi bi-thermometer-half"></i>
                     </li>
                 </Link>
                 <Link to="/ForeCast">
