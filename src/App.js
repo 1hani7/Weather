@@ -24,7 +24,7 @@ function App() {
   })
   const test2 = useSelector(state=>{
     return state.CurrentWeather;
-  })
+  });
   
   useEffect(()=>{
     dispatch(getCurrentWeather());
