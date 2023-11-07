@@ -13,7 +13,8 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     display:flex; align-items: center;
     justify-content: space-between;
-    padding: 2.9px 20px;
+    padding: 0px 20px;
+    height: calc(420px / 8.95);
 }
 .RainSnowContainer > table > tbody > tr:last-child{
     border: none;

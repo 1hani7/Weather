@@ -3,19 +3,48 @@ import { useSelector, useDispatch } from 'react-redux';
 import './css/SearchBar.css';
 import data from './KoreanLatLon.json';
 import { ChangeShi, ChangeDong, ChangeGoo } from '../../features/LocationInfo/LocationSlice';
+import getCurrentWeather from '../../features/CurrentWeather/CurrentWeatherAPI';
+import getForeCastWeather from '../../features/ForeCastWeather/ForeCastAPI';
 
 
 // 검색 바
 export default function SearchBar() {
+    const dispatch = useDispatch();
+    const Shi = useSelector(state => state.ShiChange);
+    const Goo = useSelector(state => state.GooChange);
+    const Dong = useSelector(state => state.DongChange);
+    const test = useSelector(state => state);
+
+    const locationChange = () => {
+        let lat = '', lon = '';
+        let temp = [];
+    
+        data.filter(item =>{
+            if( item.시 === Shi && item.구 === Goo &&
+                item.동 === Dong ){
+                    lat = item.lat;
+                    lon = item.lon;
+            }
+        });
+        temp.push(lat, lon);
+
+        dispatch(getCurrentWeather(temp));
+        dispatch(getForeCastWeather(temp));
+
+        console.log(test)
+    }
+
     return (
         <div className="SearchContainer">
             <ShiOptions />
             <GooOptions />
             <DongOptions />
-            <button><i className="bi bi-search"></i></button>
+            <button onClick={locationChange}><i className="bi bi-search"></i></button>
         </div>
     )
 }
+// 지역 변경
+
 
 
 // 시 옵션

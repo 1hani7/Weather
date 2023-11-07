@@ -26,9 +26,14 @@ function App() {
     return state.CurrentWeather;
   });
   
+  
   useEffect(()=>{
-    dispatch(getCurrentWeather());
-    dispatch(getForeCastWeather());
+    let lat = 36.3333;
+    let lon = 127.4167;
+    const latLon = [lat, lon];
+
+    dispatch(getCurrentWeather(latLon));
+    dispatch(getForeCastWeather(latLon));
     console.log(test);
     console.log(test2);
   },[])
