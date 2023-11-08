@@ -1,18 +1,31 @@
 .ForeCastContainer{
     overflow-y: scroll; height: 750px;
+    width:100%;
     padding-right : 20px;
+    color:white;
 }
 
-.ForeCastContainer > div{
-    margin-bottom: 20px;
-    width:100%; height:300px;
-    border-radius: 20px;
+.ForeCastTitle{
+    border-radius: 20px 20px 0px 0px;
+    margin-bottom: 10px;
+    padding: 5px 0;
+    padding-left: 20px;
     background: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(10px);
     box-shadow: 3px 5px 10px 2px rgba(46, 46, 46, 0.5);
 }
 
-.ForeCastContainer > div:hover{
+.ForeCastContainer > div{
+    margin-bottom: 35px;
+    width:1039.38px; height:300px;
+    border-radius: 0px 0px 20px 20px;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: 3px 5px 10px 2px rgba(46, 46, 46, 0.5);
+    padding: 25px;
+}
+
+/* .ForeCastContainer > div:hover{
     transform: translateY(5px);
     transition: 0.5s ease;
-}
+} */

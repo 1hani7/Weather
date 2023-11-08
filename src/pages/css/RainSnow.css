@@ -1,32 +1,14 @@
-.RainSnowContainer{
-    display:flex; flex-direction: column;
-    row-gap:20px;
+.RainSnowPageContainer{
+    color: white;
+    width: 100%; height: 100%;
+    overflow-y: scroll;
+    padding-right: 20px;
 }
 
-.RainSnowRow1{
-    display:flex; justify-content: space-between;
-    align-items: center;
-    width:100%; height:330px;
-    column-gap: 20px;
-}
-
-.RainSnowRow1 > div:first-child{ width:40%;}
-
-.RainSnowRow2{
-    width:100%; height:400px;
-}
-
-.RainSnowRow1 > div,
-.RainSnowRow2 > div{
-    width:100%; height:100%;
-    border-radius: 20px;
-    background: rgba(0, 0, 0, 0.2);
+.RainSnowPageContainer > h4{
+    background: rgba(0,0,0,0.2);
     backdrop-filter: blur(10px);
-    box-shadow: 3px 5px 10px 2px rgba(46, 46, 46, 0.5);
-}
-
-.RainSnowRow1 > div:hover,
-.RainSnowRow2 > div:hover{
-    transform: translateY(5px);
-    transition: 0.5s ease;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-bottom:20px;
 }

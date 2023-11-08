@@ -35,6 +35,8 @@ const options = {
             }
         },
         y: {
+            min: 0,
+            max: 40,
             ticks: {
                 color: 'white',
                 callback: function (val) {

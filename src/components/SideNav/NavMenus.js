@@ -23,11 +23,6 @@ export default function NavMenus() {
     return (
         <div className="MenuContainer">
             <ul>
-                <Link to="/ForeCast">
-                    <li className="iconList" onClick={clicked}>
-                        <i className="bi bi-graph-up-arrow"></i>
-                    </li>
-                </Link>
                 <Link to="/RainSnow">
                     <li className="iconList" onClick={clicked}>
                         <i className="bi bi-umbrella"></i>
@@ -42,6 +37,11 @@ export default function NavMenus() {
                 <Link to="Wind">
                     <li className="iconList" onClick={clicked}>
                         <i className="bi bi-wind"></i>
+                    </li>
+                </Link>
+                <Link to="/ForeCast">
+                    <li className="iconList" onClick={clicked}>
+                        <i className="bi bi-graph-up-arrow"></i>
                     </li>
                 </Link>
             </ul>

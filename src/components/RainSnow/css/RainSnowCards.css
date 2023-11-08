@@ -1,0 +1,59 @@
+.RainSnowPageContainer{
+    color: white;
+}
+
+.RainSnowTitle{
+    display:flex; column-gap: 20px;
+    background: rgba(0,0,0,0.2);
+    backdrop-filter: blur(10px);
+    margin-bottom: 20px;
+    padding: 5px 20px;
+    border-radius: 20px;
+}
+
+.RainSnowCards{
+    width: 100%; height: fit-content;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.RainSnowCardTop{
+    width:100%;
+    border-radius: 20px;
+    background: rgba(0,0,0,0.2);
+    backdrop-filter: blur(10px);
+    display:flex; align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    grid-column: 1/3;
+    font-weight:bolder;
+}
+
+.RainSnowCard > div > img{
+    width:70px;
+}
+
+.RainSnowCard{
+    width:100%;
+    border-radius: 20px;
+    background: rgba(0,0,0,0.2);
+    backdrop-filter: blur(10px);
+    display:flex; align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.RainSnowCenterInfo{
+    display:flex; flex-direction: column;
+}
+
+.RainSnowCenterInfo > div,
+.RainSnowCardInfo > div{
+    padding: 3px 0px;
+    font-size: 15px;
+}
+
+.RainSnowInfoBox{
+    display:flex; column-gap: 25px;
+}
