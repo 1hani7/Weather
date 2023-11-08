@@ -7,6 +7,7 @@
 .PressureContainer > div{
     color: white;
     font-weight:bolder; font-size:30px;
+    text-align: center;
 }
 
 .PressureContainer > div > span{

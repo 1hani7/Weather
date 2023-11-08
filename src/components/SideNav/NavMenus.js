@@ -23,11 +23,6 @@ export default function NavMenus() {
     return (
         <div className="MenuContainer">
             <ul>
-                <Link to="/DayTem">
-                    <li className="iconList" onClick={clicked}>
-                        <i className="bi bi-thermometer-half"></i>
-                    </li>
-                </Link>
                 <Link to="/ForeCast">
                     <li className="iconList" onClick={clicked}>
                         <i className="bi bi-graph-up-arrow"></i>

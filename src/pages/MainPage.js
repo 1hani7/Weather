@@ -8,7 +8,6 @@ import Humidity from '../components/MainPage/Humidity';
 import Windy from '../components/MainPage/Windy';
 import Cloudy from '../components/MainPage/Cloudy';
 import RainSnow from '../components/MainPage/RainSnow';
-import FC from '../components/MainPage/FC';
 
 export default function MainPage(){
     return(
@@ -27,9 +26,6 @@ export default function MainPage(){
                 <div className="row2Right">
                     <RainSnow/>
                 </div>
-            </div>
-            <div className="row3">
-                    <FC/>
             </div>
         </div>
     )

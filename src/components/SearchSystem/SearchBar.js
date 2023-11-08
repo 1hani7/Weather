@@ -13,26 +13,40 @@ export default function SearchBar() {
     const Shi = useSelector(state => state.ShiChange);
     const Goo = useSelector(state => state.GooChange);
     const Dong = useSelector(state => state.DongChange);
-    const test = useSelector(state => state);
+
+
+    const test = useSelector(state => {
+        return state.ForeCastWeather;
+    })
+    const test2 = useSelector(state => {
+        return state.CurrentWeather;
+    });
 
     const locationChange = () => {
         let lat = '', lon = '';
         let temp = [];
-    
-        data.filter(item =>{
-            if( item.시 === Shi && item.구 === Goo &&
-                item.동 === Dong ){
-                    lat = item.lat;
-                    lon = item.lon;
+
+        data.filter(item => {
+            if (item.시 === Shi && item.구 === Goo &&
+                item.동 === Dong) {
+                lat = item.lat;
+                lon = item.lon;
             }
         });
         temp.push(lat, lon);
 
         dispatch(getCurrentWeather(temp));
         dispatch(getForeCastWeather(temp));
-
-        console.log(test)
     }
+
+    useEffect(() => {
+        locationChange();
+    }, []);
+
+    // useEffect(()=>{
+    //     console.log(test);
+    //     console.log(test2);
+    // }, [test, test2])
 
     return (
         <div className="SearchContainer">
@@ -62,7 +76,7 @@ const ShiOptions = () => {
         dispatch(ChangeDong(null));
     }
 
-    const [initValue, changeInit] = useState('대전광역시') 
+    const [initValue, changeInit] = useState('대전광역시')
 
     return (
         <select id="shi" name="shi" onChange={change} value={initValue}>
@@ -77,7 +91,7 @@ const ShiOptions = () => {
     )
 }
 
- 
+
 // 구 옵션
 const GooOptions = () => {
     const Shi = useSelector(state => {
@@ -154,7 +168,7 @@ const DongOptions = () => {
         });
         changeArr(Array.from(Dongs).sort());
 
-        console.log(Shi + Goo + Dong);
+        // console.log(Shi + Goo + Dong);
     }, [Goo, Dong]);
 
 

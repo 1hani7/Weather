@@ -35,14 +35,3 @@ export default function RainSnow(){
         </div>
     )
 }
-
-{/* <div className='weatherCard' key={i}>
-                        <div className='weatherCardImageWrapper'>
-                            <img src={`${Public}/images/status/${v.weather[0].icon}.png`}/>
-                        </div>
-                        <div>
-                            <span>{v.dt_txt.split(' ')[0].split('-').slice(1, 3).join('월')}일</span><br/>
-                            <span>{v.dt_txt.split(' ')[1].split(':').slice(0,2).join(':')}</span>&nbsp;
-                            <span>{v.weather[0].description}</span>
-                        </div>
-                    </div> */}
