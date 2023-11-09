@@ -36,3 +36,17 @@
     color: white;
     text-align: center;
 }
+
+@media(max-width:1000px){
+    .windMeter{
+        height: 90%;
+    }
+    .WindMeterCase{
+        height: 100%;
+        display:flex; align-items: center;
+        justify-content: center;
+    }
+    .WindMeterCase img{
+        width: fit-content;
+    }
+}

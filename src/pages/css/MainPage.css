@@ -13,7 +13,6 @@
 .MainPage .row1 > div{
     background: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(10px);
-    
     box-shadow: 3px 5px 10px 2px rgba(46, 46, 46, 0.5);
 }
 
@@ -75,5 +74,42 @@
     }
     100%{
         opacity: 1;
+    }
+}
+
+
+@media(max-width:1000px){
+    .MainPage{
+        height:750px;
+        overflow-y: scroll;
+        padding-right:20px;
+    }
+
+    .MainPage .row1{
+        flex-direction: column;
+        height:fit-content;
+        gap:20px;
+    }
+
+    .MainPage .row2{
+        flex-direction: column;
+        row-gap: 20px;
+    }
+    .MainPage .row2 > div{
+        width:100%;
+    }
+
+    
+    .MainPage .row2Left > div{
+        width: 100%;
+        display:flex; justify-content: center;
+        align-items: center;
+    }
+}
+
+@media(max-width:570px){
+    .MainPage .row2Left{
+        width:100%;
+        display:flex; flex-direction: column;
     }
 }

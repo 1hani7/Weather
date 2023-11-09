@@ -48,7 +48,10 @@ export default function LocalTime() {
                     </li>
                     <li>
                         <i class="bi bi-globe-asia-australia"></i>
-                        위도 : {latLon.lat} | 경도 : {latLon.lon}
+                        <div>
+                            <div>위도 {latLon.lat}&nbsp;</div>
+                            <div>경도 {latLon.lon}</div>
+                        </div>
                     </li>
                 </ul>
             </div>

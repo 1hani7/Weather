@@ -18,3 +18,9 @@
 .cloudsInfo > i{
     font-size:30px;
 }
+
+.CloudyContainer > div:first-child{
+    height: 100%; width: 100%;
+    display:flex; align-items: center;
+    justify-content: center;
+}

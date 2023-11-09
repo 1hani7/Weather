@@ -21,3 +21,9 @@
   color: white; font-weight: bolder;
   font-size: 5rem;
 }
+
+@media(max-width:1200px){
+  .App{
+    width: calc(100vw - 60px); padding-left:20px;
+  }
+}

@@ -13,9 +13,6 @@ export default function Source(){
                     <div><img src={`${Public}/images/redux.png`}/>Redux-toolkit</div>
                     <div><img src={`${Public}/images/chartJs.png`}/>react-chartjs-2</div>
                 </div>
-                <p>
-
-                </p>
                 <small>
                     데이터 출처 : https://openweathermap.org/
                 </small>
