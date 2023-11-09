@@ -1,6 +1,8 @@
 .WindContainer{
     display:flex; flex-direction: column;
     row-gap:20px;
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards;
 }
 
 .WindRow1{

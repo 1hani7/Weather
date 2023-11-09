@@ -1,7 +1,7 @@
 a{text-decoration: none; color: inherit;}
 
 .MenuContainer{
-    width:100%;
+    width:100%; height: 100%;
     display: flex; flex-direction: column;
     align-items: center;
 }
@@ -27,6 +27,13 @@ a{text-decoration: none; color: inherit;}
     background: rgba(0,0,0,0.3);
     border-left: 3px solid white;
     transition: all 0.15s;
+}
+
+.infoIcon{
+    width:100%; padding: 20px 0;
+    font-size:25px; cursor: pointer;
+    position:absolute;
+    bottom: 0;
 }
 
 .bi{pointer-events: none;}

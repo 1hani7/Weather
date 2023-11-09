@@ -1,6 +1,8 @@
 .MainPage{
     display:flex; flex-direction: column;
     row-gap:20px;
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards;
 }
 
 .MainPage .row1{
@@ -65,4 +67,13 @@
 .MainPage .row3 > div:hover{
     transform: translateY(5px);
     transition: 0.5s ease;
+}
+
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }

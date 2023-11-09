@@ -1,7 +1,6 @@
 /* eslint-disable */
 import React, { Suspense, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux';
 import './App.css';
 
 import SideNav from './components/SideNav/SideNav';
@@ -12,7 +11,8 @@ const MainPage = React.lazy(() => import('./pages/MainPage'));
 const ForeCast = React.lazy(() => import('./pages/ForeCast'));
 const RainSnow = React.lazy(() => import('./pages/RainSnow'));
 const Clouds = React.lazy(() => import('./pages/Clouds'));
-const Wind = React.lazy(() => import('./pages/Wind'));
+const Source = React.lazy(() => import('./pages/Source'));
+// const Wind = React.lazy(() => import('./pages/Wind'));
 
 function App() {
 
@@ -26,7 +26,8 @@ function App() {
             <Route path="/ForeCast" element={<ForeCast />} />
             <Route path="/RainSnow" element={<RainSnow />} />
             <Route path="/Clouds" element={<Clouds />} />
-            <Route path="/Wind" element={<Wind />} />
+            <Route path="/Source" element={<Source />} />
+            {/* <Route path="/Wind" element={<Wind />} /> */}
           </Routes>
         </Suspense>
       </div>

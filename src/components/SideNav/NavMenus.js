@@ -34,14 +34,19 @@ export default function NavMenus() {
                         <i className="bi bi-cloud-haze2"></i>
                     </li>
                 </Link>
-                <Link to="Wind">
+                {/* <Link to="Wind">
                     <li className="iconList" onClick={clicked}>
                         <i className="bi bi-wind"></i>
                     </li>
-                </Link>
+                </Link> */}
                 <Link to="/ForeCast">
                     <li className="iconList" onClick={clicked}>
                         <i className="bi bi-graph-up-arrow"></i>
+                    </li>
+                </Link>
+                <Link to="/Source">
+                    <li className='infoIcon'>
+                        <i class="bi bi-info-circle"></i>
                     </li>
                 </Link>
             </ul>
