@@ -55,7 +55,7 @@ const options = {
         tooltip: {
             enabled: true,
             callbacks: {
-                label : function (context) {
+                label: function (context) {
                     const label = context.dataset.label || '';
                     const value = context.parsed.y || 0;
                     const unit = '˚C';
@@ -98,6 +98,17 @@ export default function CurrentTemp() {
         setDayTempData(dataList, setTempData);
     }, [changeTarget])
 
+    useEffect(()=>{
+        const resizeChart = () => {
+            const chart = document.querySelector('.chart');
+            chart.style.width = '100%';
+        }
+        window.addEventListener('resize', resizeChart);
+        return () => {
+            window.removeEventListener('resize', resizeChart);
+        }
+    }, [])
+
     return (
         <div className="CurrentTempContainer">
             <Line options={options} data={data} className='chart' />
@@ -105,7 +116,7 @@ export default function CurrentTemp() {
     )
 }
 
-function setDayTempData(dataList, setTempData){
+function setDayTempData(dataList, setTempData) {
     const temp = [];
     dataList.slice(0, 9).forEach(item => {
         temp.push(

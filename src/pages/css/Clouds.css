@@ -1,4 +1,5 @@
 .CloudsContainer{
+    width: 100%;
     height:100%;
     gap: 20px;
     overflow: scroll;
@@ -51,4 +52,21 @@
 .CloudsTimeAbout{
     display: flex; align-items: center;
     column-gap: 15px;
+}
+
+@media(max-width:1060px){
+    .CloudsTimeAbout{
+        flex-direction: column;
+        align-items: start;
+    }
+}
+@media(max-width:960px){
+    .CloudsInfoBar{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+    .cloudGraphBar{
+        width:100%;
+    }
 }

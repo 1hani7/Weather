@@ -1,6 +1,6 @@
 /* eslint-disable */
 import React, { Suspense, useEffect } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import './App.css';
 
 import SideNav from './components/SideNav/SideNav';
@@ -15,6 +15,15 @@ const Source = React.lazy(() => import('./pages/Source'));
 // const Wind = React.lazy(() => import('./pages/Wind'));
 
 function App() {
+  const location = useLocation();
+  useEffect(()=>{
+    const t = document.querySelector('.topBars');
+    if(location.pathname === '/Source'){
+      t.style.display = 'none';
+    }else{
+      t.style.display = 'flex';
+    }
+  },[location]);
 
   return (
     <div className="App">
@@ -31,8 +40,10 @@ function App() {
           </Routes>
         </Suspense>
       </div>
-      <SearchBar />
-      <Clock />
+      <div className='topBars'>
+        <Clock />
+        <SearchBar />
+      </div>
     </div>
   );
 }

@@ -6,8 +6,8 @@
     align-items: center;
 }
 
-
 @media(max-width:1000px) {
-    .CurrentTempContainer { width: 100%; }
-
+    .CurrentTempContainer{
+        width: 100%;
+    }
 }
