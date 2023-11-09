@@ -36,7 +36,7 @@ const options = {
             }
         },
         y: {
-            min: 0,
+            min: -20,
             max: 40,
             ticks: {
                 color: 'white',

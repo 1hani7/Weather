@@ -43,10 +43,10 @@ export default function SearchBar() {
         locationChange();
     }, []);
 
-    useEffect(()=>{
-        console.log(test);
-        // console.log(test2);
-    }, [test, test2])
+    // useEffect(()=>{
+    //     console.log(test);
+    //     // console.log(test2);
+    // }, [test, test2])
 
     return (
         <div className="SearchContainer">
