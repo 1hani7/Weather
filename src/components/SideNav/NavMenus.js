@@ -14,7 +14,7 @@ export default function NavMenus() {
     const init = () => {
         const iconList = document.querySelectorAll('.iconList');
         const path = useLocation().pathname;
-        if( path === "/" ){
+        if (path === "/") {
             iconList.forEach(item => item.classList.remove('clicked'));
         }
     }
@@ -39,7 +39,7 @@ export default function NavMenus() {
                         <i className="bi bi-wind"></i>
                     </li>
                 </Link> */}
-                <Link to="/ForeCast">
+                <Link to="/ForeCast" className='Cs'>
                     <li className="iconList" onClick={clicked}>
                         <i className="bi bi-graph-up-arrow"></i>
                     </li>

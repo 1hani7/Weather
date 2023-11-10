@@ -98,6 +98,17 @@ export default function CloudCast(){
         setHumidityData(dataList, setCloudData);
     }, [changeTarget])
 
+    useEffect(()=>{
+        const resizeChart = () => {
+            const chart = document.querySelector('.chart');
+            chart.style.width = '100%';
+        }
+        window.addEventListener('resize', resizeChart);
+        return () => {
+            window.removeEventListener('resize', resizeChart);
+        }
+    }, [])
+
     return(
         // 흐림 정도
         <div className='CloudCastContainer'>

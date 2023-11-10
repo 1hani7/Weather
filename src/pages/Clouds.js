@@ -27,8 +27,9 @@ export default function Clouds() {
                         <div className='CloudsAmount'>
                             <div className='cloudGraphBox'>
                                 <div className='cloudGraphBar'
-                                     style={{width : `${val.clouds.all}%`}}
-                                ></div>
+                                     style={{width : `${val.clouds.all}%`}}>
+
+                                </div>
                             </div>
                             <div>
                                 <strong>{val.clouds.all}%</strong>&nbsp;

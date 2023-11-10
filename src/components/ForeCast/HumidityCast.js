@@ -97,6 +97,17 @@ export default function HumidityCast(){
         setHumidityData(dataList, setHumData);
     }, [changeTarget])
 
+    useEffect(()=>{
+        const resizeChart = () => {
+            const chart = document.querySelector('.chart');
+            chart.style.width = '100%';
+        }
+        window.addEventListener('resize', resizeChart);
+        return () => {
+            window.removeEventListener('resize', resizeChart);
+        }
+    }, [])
+
     return(
         // 습도
         <div className='HumidityCastContainer'>

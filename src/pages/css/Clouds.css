@@ -65,8 +65,20 @@
         display: flex;
         flex-direction: column;
         align-items: start;
+        row-gap:10px;
     }
     .cloudGraphBar{
+        width:100%;
+    }
+    .CloudsAmount{
+        width: 100%;
+    }
+    .cloudGraphBox{
+        width:100%;
+    }
+    .CloudsTimeAbout{
+        flex-direction: row;
+        justify-content: right;
         width:100%;
     }
 }

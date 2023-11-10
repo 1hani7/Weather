@@ -97,6 +97,17 @@ export default function TemCast() {
         setDayTempData(dataList, setTempData);
     }, [changeTarget])
 
+    useEffect(()=>{
+        const resizeChart = () => {
+            const chart = document.querySelector('.chart');
+            chart.style.width = '100%';
+        }
+        window.addEventListener('resize', resizeChart);
+        return () => {
+            window.removeEventListener('resize', resizeChart);
+        }
+    }, [])
+
     return (
         // 온도변화 그래프, 체감온도 그래프
         <div className='TemCastContainer'>

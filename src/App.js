@@ -16,33 +16,35 @@ const Source = React.lazy(() => import('./pages/Source'));
 
 function App() {
   const location = useLocation();
-  useEffect(()=>{
+  useEffect(() => {
     const t = document.querySelector('.topBars');
-    if(location.pathname === '/Source'){
+    if (location.pathname === '/Source') {
       t.style.display = 'none';
-    }else{
+    } else {
       t.style.display = 'flex';
     }
-  },[location]);
+  }, [location]);
 
   return (
     <div className="App">
-      <SideNav />
-      <div className="Contents">
-        <Suspense fallback={<div className="Loading">Now Loading...</div>}>
-          <Routes>
-            <Route path="/" element={<MainPage />} />
-            <Route path="/ForeCast" element={<ForeCast />} />
-            <Route path="/RainSnow" element={<RainSnow />} />
-            <Route path="/Clouds" element={<Clouds />} />
-            <Route path="/Source" element={<Source />} />
-            {/* <Route path="/Wind" element={<Wind />} /> */}
-          </Routes>
-        </Suspense>
-      </div>
       <div className='topBars'>
         <Clock />
         <SearchBar />
+      </div>
+      <div>
+        <SideNav />
+        <div className="Contents">
+          <Suspense fallback={<div className="Loading">Now Loading...</div>}>
+            <Routes>
+              <Route path="/" element={<MainPage />} />
+              <Route path="/ForeCast" element={<ForeCast />} />
+              <Route path="/RainSnow" element={<RainSnow />} />
+              <Route path="/Clouds" element={<Clouds />} />
+              <Route path="/Source" element={<Source />} />
+              {/* <Route path="/Wind" element={<Wind />} /> */}
+            </Routes>
+          </Suspense>
+        </div>
       </div>
     </div>
   );
