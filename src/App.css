@@ -7,6 +7,10 @@
   position:relative;
 }
 
+.App > div{
+  backdrop-filter: blur(10px);
+}
+
 .App > div:last-child{
   height: 100%;  width: 100%;
   display: flex;
@@ -15,7 +19,6 @@
 
 .Contents{
   flex-grow: 1; height:100%;
-  padding-right: 20px;
   position: relative;
 }
 
@@ -28,7 +31,7 @@
 }
 
 .topBars{
-  padding: 0 10px;
+  padding-left: 10px;
   display: flex; justify-content: space-between;
   align-items: center;
   width:100%;

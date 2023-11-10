@@ -15,7 +15,6 @@ export default function Clouds() {
             }
         });
         setDataList(temp);
-        console.log(temp)
     }, [data]);
 
     return (

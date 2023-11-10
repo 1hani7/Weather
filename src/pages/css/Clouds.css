@@ -23,6 +23,7 @@
     padding: 10px 20px;
     background: rgba(0,0,0,0.2);
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border-radius: 20px;
     margin-bottom: 20px;
 }
@@ -32,6 +33,7 @@
     border-radius: 30px;
     background: rgba(0,0,0,0.2);
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     margin-bottom: 10px;
 }
 
